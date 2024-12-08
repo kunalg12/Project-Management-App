@@ -26,6 +26,8 @@ class TaskFactory extends Factory
             'updated_by' => 1,
             'assigned_user_id' => 1,
             'priority' => fake()->randomElement(['low', 'medium', 'high']),
+            'created_at' => time(),
+            'updated_at' => time(),
         ];
     }
 }

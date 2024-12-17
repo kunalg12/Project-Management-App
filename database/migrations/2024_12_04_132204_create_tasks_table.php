@@ -16,14 +16,15 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->longText('description')->nullable();
-            $table->timestamp('due_date');
+            $table->text('description');
+            $table->date('due_date');
             $table->string('status');
             $table->string('image_path')->nullable();
-            $table->foreignId('created_by')->constrained('users');
-            $table->foreignId('updated_by')->constrained('users');
-            $table->foreignId('assigned_user_id')->constrained('users');
-            $table->foreignId('project_id')->constrained('projects');
+            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('updated_by');
+            $table->unsignedBigInteger('assigned_user_id')->nullable();
+            $table->string('priority');
+            $table->unsignedBigInteger('project_id')->nullable();
             $table->timestamps();
         });
     }

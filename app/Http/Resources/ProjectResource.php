@@ -19,12 +19,12 @@ class ProjectResource extends JsonResource
             "id"=> $this->id,
             "name"=> $this->name,
             "description"=> $this->description,
-            "created_At" => Carbon::parse($this->created_at)->format("Y-m-d"),
-            "dueDate" => Carbon::parse($this->dueDate)->format("Y-m-d"),
+            "created_at" => Carbon::parse($this->created_at)->format("Y-m-d"),
+            "due_date" => Carbon::parse($this->due_date)->format("Y-m-d"),
             "status" => $this->status,
-            "imagePath" => $this->ImagePath,
-            "createdBy" => $this->createdAt,
-            "updatedBy"=> $this->updated_at,
+            "image_path" => $this->image_path,
+            "created_by" => $this->created_by,
+            "updated_by"=> $this->updated_by,
         ];
     }
 }

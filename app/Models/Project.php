@@ -14,4 +14,9 @@ class Project extends Model
     {
         return $this->hasMany(Task::class);
     }
+
+    public function createdBy(User $user)
+    {
+        return $this ->belongsTo(User::class,"createdBy","id");
+    }
 }

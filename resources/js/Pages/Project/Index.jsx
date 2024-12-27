@@ -2,11 +2,6 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
 
 export default function Index({ auth, errors, projects }) {
-    const handleAddProject = () => {
-        // Logic to add a new project
-        console.log("Add new project");
-    };
-
     return (
         <AuthenticatedLayout
             auth={auth}
@@ -24,12 +19,6 @@ export default function Index({ auth, errors, projects }) {
                                     <li key={index}>{project.name}</li>
                                 ))}
                             </ul>
-                            <button 
-                                onClick={handleAddProject} 
-                                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-                            >
-                                Add Project
-                            </button>
                         </div>
                     </div>
                 </div>

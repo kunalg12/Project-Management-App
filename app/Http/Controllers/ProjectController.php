@@ -18,7 +18,7 @@ class ProjectController extends Controller
         $query = Project::query();
         $projects = $query->paginate(10);
         return inertia("Project/Index",[
-            
+            'projects' => $projects
         ]);
     }
 

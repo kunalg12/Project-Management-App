@@ -36,18 +36,3 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
         </AuthenticatedLayout>
     );
 }
-function ProfileHeader() {
-    return (
-        <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            Profile
-        </h2>
-    );
-}
-function ProfileSection({ children }) {
-    return (
-        <div className="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
-            {children}
-        </div>
-    );
-}
-

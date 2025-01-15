@@ -8,9 +8,7 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
     return (
         <AuthenticatedLayout
             auth={auth}
-            header={
-                <ProfileHeader />
-            }
+            header={<ProfileHeader />}
         >
             <Head title="Profile" />
 
